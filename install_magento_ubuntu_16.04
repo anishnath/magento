@@ -12,12 +12,10 @@ Install Apache
 		    </Directory>
 		</VirtualHost>
 
+Enable magento.conf 
 	sudo a2ensite magento.conf
-
 Disable Default 000-default.conf 
 	sudo a2dissite 000-default.conf
-
-
 
 Installing PHP 7 on Ubuntu 14
 =====================================================
@@ -28,20 +26,15 @@ Setup the Repo
 	sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
 	apt-get -y install php7.0
 
-
 Increasing the PHP memory Limit
 vim /etc/php/7.1/apache2/php.ini 
 memory_limit = 512M
 
-apt-get -y install php7 php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd libapache2-mod-php php7.0-zip php7.0-intl
+apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd libapache2-mod-php php7.0-zip php7.0-intl
 
 Enable URL Re-write 
 sudo a2enmod rewrite
 sudo php5enmod mcrypt
-
-Restart 
-service apache2 restart
-
 
 Installing Mysql on  on Ubuntu 14
 =====================================================
@@ -60,6 +53,8 @@ Download the Magento CE from the Magento Website
 sudo rsync -avP /tmp/Magento-CE-2/. /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/
 
+Restart 
+service apache2 restart
 
 
 
