@@ -30,7 +30,7 @@ Increasing the PHP memory Limit
 vim /etc/php/7.1/apache2/php.ini 
 memory_limit = 512M
 
-apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd libapache2-mod-php php7.0-zip php7.0-intl
+apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd libapache2-mod-php php7.0-zip php7.0-intl php7.0-xml
 
 Enable URL Re-write 
 sudo a2enmod rewrite
