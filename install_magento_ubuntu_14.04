@@ -55,6 +55,5 @@ sudo chown -R www-data:www-data /var/www/html/
 Restart 
 sudo service apache2 restart
 
-
-
-
+Begin the Magento Installation by Typing 
+http://<<host>> 
